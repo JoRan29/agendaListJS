@@ -5,6 +5,38 @@ let inputNewTask = document.querySelector("#newTask");
 let msg = document.querySelector(".msg");
 let radioApp = document.querySelector("#append");
 let radioPre = document.querySelector("#prepend");
+let animate = document.querySelector(".animate");
+let animateText = animate.textContent;
+
+// animate text
+
+let splitText = animateText.split("");
+animate.textContent = "";
+
+for (let i = 0; i < splitText.length; i++) {
+  animate.innerHTML += "<span>" + splitText[i] + "</span>";
+}
+
+let complete = () => {
+  clearInterval(timer);
+  timer = null;
+};
+
+let onTick = () => {
+  let span = animate.querySelectorAll("span")[char];
+  span.classList.add("move");
+  char++;
+  if (char === splitText.length) {
+    complete();
+    return;
+  }
+};
+
+let char = 0;
+let timer = setInterval(onTick, 60);
+
+console.log(splitText);
+// radio btns
 
 console.log(radioApp, radioPre);
 // event listener - click
