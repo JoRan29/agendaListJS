@@ -66,7 +66,9 @@ inputNewTask.addEventListener("keyup", (e) => {
     let liNewTask = document.createElement("li");
     let inputText = inputNewTask.value;
     liNewTask.textContent = inputText;
-    if (inputText != "") {
+    // RegEx
+    let pattern = /.*\S.*/;
+    if (inputText.match(pattern)) {
       if (radioApp.checked) {
         ulTasks.append(liNewTask);
       } else {
