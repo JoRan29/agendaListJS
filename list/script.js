@@ -9,7 +9,6 @@ let animate = document.querySelector(".animate");
 let animateText = animate.textContent;
 
 // animate text
-
 let splitText = animateText.split("");
 animate.textContent = "";
 
@@ -35,27 +34,8 @@ let onTick = () => {
 let char = 0;
 let timer = setInterval(onTick, 60);
 
-console.log(splitText);
-// radio btns
-
-console.log(radioApp, radioPre);
-// event listener - click
-// liTasks.forEach((li) => {
-//   li.addEventListener("click", (e) => {
-//     e.target.remove();
-
-//     // if (e.target.style.textDecoration == "line-through") {
-//     //   e.target.style.textDecoration = "none";
-//     //   e.target.style.color = ""; // "" returns color to default
-//     // } else {
-//     //   e.target.style.textDecoration = "line-through";
-//     //   e.target.style.color = "gray";
-//     // }
-//   });
-// });
-
+// adding tasks 
 ulTasks.addEventListener("click", (e) => {
-  console.log(e);
   if (e.target.tagName == "LI") {
     e.target.remove();
   }
