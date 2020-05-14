@@ -34,7 +34,7 @@ let onTick = () => {
 let char = 0;
 let timer = setInterval(onTick, 60);
 
-// adding tasks 
+// adding tasks
 ulTasks.addEventListener("click", (e) => {
   if (e.target.tagName == "LI") {
     e.target.remove();
@@ -64,3 +64,34 @@ inputNewTask.addEventListener("keyup", (e) => {
     inputNewTask.value = "";
   }
 });
+
+// Modal
+// let openModalButtons = document.querySelectorAll("[data-modal-target]");
+// let closeModalButtons = document.querySelectorAll("[data-close-button]");
+// let overlay = document.getElementById("overlay");
+
+// openModalButtons.forEach((b) => {
+//   b.addEventListener("click", () => {
+//     let modal = document.querySelector(button.dataset.modalTarget);
+//     openModal(modal);
+//   });
+// });
+
+// closeModalButtons.forEach((b) => {
+//   b.addEventListener("click", () => {
+//     let modal = button.closest(".modal");
+//     closeModal(modal);
+//   });
+// });
+
+// let openModal = () => {
+//   if (modal == null) return;
+//   modal.classList.add("active");
+//   overlay.classList.add("active");
+// };
+
+// let closeModal = () => {
+//   if (modal == null) return;
+//   modal.classList.remove("active");
+//   overlay.classList.remove("active");
+// };
